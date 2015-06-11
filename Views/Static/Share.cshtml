@@ -1,0 +1,14 @@
+﻿<div class="share">
+    <p>Here's the link to your work item:</p>
+    <input type="text" class="form-control" readonly="readonly" value="http://@(Request.QueryString["account"]).vso.io/@(Request.QueryString["id"])">
+</div>
+
+@section scripts {
+
+    <script type="text/javascript">
+        $(function () {
+            $('input').select();
+        })
+    </script>
+
+}

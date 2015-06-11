@@ -1,0 +1,42 @@
+﻿body {
+  padding-top: 50px;
+  word-wrap: break-word;
+}
+
+.main {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.share {
+    padding: 15px 5px;
+}
+
+.url {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.spacer {
+    height: 120px;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+      padding-top: 0px;
+    }
+
+    .main {
+      padding: 15px 15px;
+      text-align: left;
+    }
+}
+
+@media screen and (max-height: 100px) {
+    body {
+      padding-top: 0px;
+    }
+}
