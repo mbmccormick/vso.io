@@ -6,7 +6,7 @@
     "provider": {
         "name": "Matt McCormick"
     },
-    "baseUri": "http://vso.io/",
+    "baseUri": "https://vso.io/",
     "icon": "http://vso.io/content/extension-icon.png",
     "contributions": {
         "vss.work.web#workItemActions": [
