@@ -11,7 +11,16 @@
     "contributions": {
         "vss.work.web#workItemActions": [
             {
-                "id": "showShortURL",
+                "id": "copyShortLinkmenu",
+                "title": "Copy short link",
+                "icon": "/content/extension-action.png",
+                "group": "actions",
+                "uri": "/extension/share"
+            }
+        ],
+        "vss.work.web#workItemToolbarActions": [
+            {
+                "id": "copyShortLinktoolbar",
                 "title": "Copy short link",
                 "icon": "/content/extension-action.png",
                 "group": "actions",
