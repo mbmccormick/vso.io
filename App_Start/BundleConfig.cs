@@ -17,6 +17,9 @@ namespace vso.io
             bundles.Add(new ScriptBundle("~/bundles/ai").Include(
                       "~/Scripts/ai.{version}-build12287.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/vss.sdk").Include(
+                      "~/Scripts/VSS.SDK.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/site").Include(
                       "~/Scripts/Site.js"));
 

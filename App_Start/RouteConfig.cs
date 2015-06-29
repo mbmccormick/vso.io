@@ -20,9 +20,21 @@ namespace vso.io
             );
 
             routes.MapSubdomainRoute(
+                name: "DownloadExtension",
+                url: "extension/download",
+                defaults: new { controller = "Static", action = "DownloadExtension" }
+            );
+
+            routes.MapSubdomainRoute(
                 name: "Share",
                 url: "share",
                 defaults: new { controller = "Static", action = "Share" }
+            );
+
+            routes.MapSubdomainRoute(
+                name: "ShareExtension",
+                url: "extension/share",
+                defaults: new { controller = "Static", action = "ShareExtension" }
             );
 
             routes.MapSubdomainRoute(

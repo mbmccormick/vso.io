@@ -1,0 +1,23 @@
+﻿@section scripts {
+
+    <script type="text/javascript">
+
+        VSS.init({ setupModuleLoader: true });
+
+        var actionContributionHandler = (function () {
+            "use strict";
+            return {
+                execute: function (actionContext) {
+                    var webContext = VSS.getWebContext();
+                    
+                    open('http://vso.io/share?account=' + webContext.account.name + '&id=' + actionContext.workItemId, '_blank', 'height=100,width=400');
+                }
+            };
+        }());
+
+        VSS.register("showShortURL", actionContributionHandler);
+        VSS.register("showShortURLbacklog", actionContributionHandler);
+
+    </script>
+
+}
