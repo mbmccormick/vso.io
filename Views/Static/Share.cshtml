@@ -1,14 +1,27 @@
 ﻿<div class="share">
     <p>Here's the link to your work item:</p>
-    <input type="text" class="form-control" readonly="readonly" value="http://@(Request.QueryString["account"]).vso.io/@(Request.QueryString["id"])">
+    <div class="input-group">
+        <input type="text" class="form-control" readonly="readonly" value="http://@(Request.QueryString["account"]).vso.io/@(Request.QueryString["id"])" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="Copied to clipboard!">
+        <div id="copy-button" data-clipboard-text="http://@(Request.QueryString["account"]).vso.io/@(Request.QueryString["id"])" class="input-group-addon"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span></div>
+    </div>
 </div>
 
 @section scripts {
 
     <script type="text/javascript">
-        $(function () {
-            $('input').select();
-        })
+
+        var client = new ZeroClipboard(document.getElementById("copy-button"));
+
+        $('[data-toggle="tooltip"]').mouseout(function () {
+            $(this).tooltip('hide');
+        });
+
+        client.on("ready", function (readyEvent) {
+            client.on("aftercopy", function (event) {
+                $('[data-toggle="tooltip"]').tooltip('toggle');
+            });
+        });
+
     </script>
 
 }

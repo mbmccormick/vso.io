@@ -6,3 +6,5 @@
 
 window.appInsights = appInsights;
 appInsights.trackPageView();
+
+ZeroClipboard.config({ swfPath: "/Scripts/ZeroClipboard.swf" });

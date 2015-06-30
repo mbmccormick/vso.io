@@ -9,16 +9,19 @@ namespace vso.io
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-1.9.1.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/ai").Include(
-                      "~/Scripts/ai.{version}-build12287.js"));
+                      "~/Scripts/ai.0.15.0-build12287.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/vss.sdk").Include(
                       "~/Scripts/VSS.SDK.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/zeroclipboard").Include(
+                      "~/Scripts/ZeroClipboard.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/site").Include(
                       "~/Scripts/Site.js"));
