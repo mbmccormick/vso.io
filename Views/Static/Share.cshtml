@@ -12,6 +12,8 @@
 
         window.moveTo((window.screen.availWidth - 400) / 2, (window.screen.availHeight - 120) / 2);
 
+        $("input").select();
+
         var client = new ZeroClipboard(document.getElementById("copy-button"));
 
         $('[data-toggle="tooltip"]').mouseout(function () {

@@ -2,8 +2,8 @@
     "manifestVersion": 1,
     "id": "vso-io",
     "version": "1.0.0",
-    "name": "vso.io - short URL for Visual Studio Online",
-    "description": "vso.io is a short URL for accessing Visual Studio Online work items. It makes it easy to quickly access a work item in your web browser or share a link to a work item with your team.",
+    "name": "vso.io",
+    "description": "Short URL for work items. Makes it easy to share a link to a work item with your team.",
     "baseUri": "https://vso.io/",
     "publisher": "mbmccormick",
     "icons": {
@@ -19,25 +19,10 @@
     "contributions": [
         {
             "id": "copyShortLinkMenu",
-            "type": "ms.vss-web",
+            "type": "ms.vss-web.action",
             "description": "",
             "targets": [
                 "ms.vss-work-web.work-item-context-menu"
-            ],
-            "properties": {
-                "text": "Copy short link",
-                "title": "Copy short link for this work item",
-                "icon": "content/extension-action.png",
-                "group": "actions",
-                "uri": "/extension/share"
-            }
-        },
-        {
-            "id": "copyShortLinkToolbar",
-            "type": "ms.vss-web",
-            "description": "",
-            "targets": [
-                "ms.vss-work.web.backlog-item-menu"
             ],
             "properties": {
                 "text": "Copy short link",
