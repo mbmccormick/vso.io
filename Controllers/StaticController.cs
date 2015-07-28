@@ -27,12 +27,12 @@ namespace vso.io.Controllers
 
         public ActionResult DownloadExtension()
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory + "/extension.json";
+            string path = AppDomain.CurrentDomain.BaseDirectory + "/vss-extension.json";
             byte[] data = System.IO.File.ReadAllBytes(path);
 
             var header = new ContentDisposition
             {
-                FileName = "extension.json",
+                FileName = "vss-extension.json",
                 Inline = false
             };
 

@@ -162,7 +162,7 @@
     <Content Include="Fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="ApplicationInsights.config" />
-    <Content Include="extension.json" />
+    <Content Include="vss-extension.json" />
     <None Include="Properties\PublishProfiles\vsoio.pubxml" />
     <Content Include="Scripts\ai.0.15.0-build12287.js" />
     <Content Include="Scripts\ai.0.15.0-build12287.min.js" />
