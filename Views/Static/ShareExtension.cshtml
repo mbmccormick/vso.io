@@ -10,7 +10,7 @@
                 execute: function (actionContext) {
                     var webContext = VSS.getWebContext();
                     
-                    open('http://vso.io/share?account=' + webContext.account.name + '&id=' + actionContext.workItemId, '_blank', 'height=120,width=400');
+                    open('http://vso.io/share?account=' + webContext.account.name + '&id=' + actionContext.workItemIds[0], '_blank', 'height=120,width=400');
                 }
             };
         }());
