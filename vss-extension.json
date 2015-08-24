@@ -22,14 +22,30 @@
             "type": "ms.vss-web.action",
             "description": "",
             "targets": [
-                "ms.vss-work-web.work-item-context-menu"
+                "ms.vss-work-web.backlog-item-menu"
             ],
             "properties": {
                 "text": "Copy short link",
                 "title": "Copy short link for this work item",
                 "icon": "content/extension-action.png",
                 "group": "actions",
-                "uri": "/extension/share"
+                "uri": "/extension/share",
+                "registeredObjectId": "copyShortLink"
+            }
+        },
+        {
+            "id": "copyShortLinkToolbar",
+            "type": "ms.vss-web.action",
+            "description": "",
+            "targets": [
+                "ms.vss-work-web.work-item-toolbar-menu"
+            ],
+            "properties": {
+                "title": "Copy short link for this work item",
+                "icon": "content/extension-action.png",
+                "group": "actions",
+                "uri": "/extension/share",
+                "registeredObjectId": "copyShortLink"
             }
         }
     ]

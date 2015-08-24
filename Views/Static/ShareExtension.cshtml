@@ -9,13 +9,14 @@
             return {
                 execute: function (actionContext) {
                     var webContext = VSS.getWebContext();
+                    var wiId = actionContext.workItemId !== undefined ? actionContext.workItemId : actionContext.workItemIds[0];
                     
-                    open('http://vso.io/share?account=' + webContext.account.name + '&id=' + actionContext.workItemIds[0], '_blank', 'height=120,width=400');
+                    open('http://vso.io/share?account=' + webContext.account.name + '&id=' + wiId, '_blank', 'height=120,width=400');
                 }
             };
         }());
 
-        VSS.register("copyShortLinkMenu", actionContributionHandler);
+        VSS.register("copyShortLink", actionContributionHandler);
 
     </script>
 
