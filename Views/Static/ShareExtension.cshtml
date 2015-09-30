@@ -8,10 +8,25 @@
             "use strict";
             return {
                 execute: function (actionContext) {
-                    var webContext = VSS.getWebContext();
-                    var wiId = actionContext.workItemId !== undefined ? actionContext.workItemId : actionContext.workItemIds[0];
-                    
-                    open('http://vso.io/share?account=' + webContext.account.name + '&id=' + wiId, '_blank', 'height=120,width=400');
+                    VSS.getService(VSS.ServiceIds.Dialog).then(function (dialogService) {
+
+                        var webCtx = VSS.getWebContext();
+                        var extensionCtx = VSS.getExtensionContext();
+                        var contributionId = extensionCtx.publisherId + "." + extensionCtx.extensionId + ".dialogContent";
+
+                        var wiId = actionContext.workItemId !== undefined ? actionContext.workItemId : actionContext.workItemIds[0];
+
+                        // Show dialog
+                        var dialogOptions = {
+                            title: "Shortlink",
+                            width: 400,
+                            height: 150,
+                            buttons: null,
+                            urlReplacementObject: { id: wiId, account: webCtx.account.name }
+                        };
+
+                        dialogService.openDialog(contributionId, dialogOptions);
+                    });
                 }
             };
         }());
