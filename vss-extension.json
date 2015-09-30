@@ -47,6 +47,15 @@
                 "uri": "/extension/share",
                 "registeredObjectId": "copyShortLink"
             }
+        },
+        {
+            "id": "dialogContent",
+            "type": "ms.vss-web.control",
+            "description": "Shortlink dialog",
+            "targets": [],
+            "properties": {
+                "uri": "/share?id={{id}}&account={{account}}"
+            }
         }
     ]
 }
