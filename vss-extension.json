@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "vso-io",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "vso.io",
     "description": "Short URL for work items. Makes it easy to share a link to a work item with your team.",
     "baseUri": "https://vso.io/",
