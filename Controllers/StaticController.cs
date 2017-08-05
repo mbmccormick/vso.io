@@ -9,6 +9,8 @@ namespace vso.io.Controllers
 {
     public class StaticController : Controller
     {
+        private const string sitename = "http://vso.io";
+
         public ActionResult Index()
         {
             string subdomain = (string)Request.RequestContext.RouteData.Values["subdomain"];
@@ -17,7 +19,7 @@ namespace vso.io.Controllers
                 subdomain != "vso")
             {
                 Response.StatusCode = 302;
-                Response.RedirectLocation = "http://vso.io" + Request.Url.PathAndQuery;
+                Response.RedirectLocation = sitename + Request.Url.PathAndQuery;
 
                 return new ContentResult();
             }
@@ -49,7 +51,7 @@ namespace vso.io.Controllers
                 subdomain != "vso")
             {
                 Response.StatusCode = 302;
-                Response.RedirectLocation = "http://vso.io" + Request.Url.PathAndQuery;
+                Response.RedirectLocation = sitename + Request.Url.PathAndQuery;
 
                 return new ContentResult();
             }
